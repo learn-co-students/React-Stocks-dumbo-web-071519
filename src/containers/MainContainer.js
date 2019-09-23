@@ -26,8 +26,7 @@ class MainContainer extends Component {
 
   onClickAdd=(stock)=>{
    this.setState({
-      portfolio: [...this.state.portfolio, stock],
-    //  filtered: [...this.state.portfolio, stock]
+      portfolio: [...this.state.portfolio, stock]
    })
   }
   onClickRemove = (stockToRemove) => {
@@ -55,8 +54,6 @@ class MainContainer extends Component {
 
  sortHendler=(option)=>{
 
-  
-   //return this.state.sortChecked
    console.log(option)
    var sortBy = (option === 'Alphabetically' ?  'ticker' : 'price')
    var sorted=this.state.filtered
@@ -71,11 +68,7 @@ class MainContainer extends Component {
      selectedOption: option,
      filtered: sorted
    })
-  //  var sortedPrice = this.state.filtered.sort((a, b) => {
-
-  //    return a.price > b.price ? b : a
-
-  //  })
+  
  }
 
 
