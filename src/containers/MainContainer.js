@@ -5,6 +5,20 @@ import SearchBar from '../components/SearchBar'
 
 class MainContainer extends Component {
 
+// state = ({
+
+//   stocks = ''
+
+// })
+
+componentDidMount() {
+  fetch('http://localhost:3000/stocks')
+  .then(res => res.json())
+  .then(data =>console.log(data))
+}
+
+
+
   render() {
     return (
       <div>
@@ -12,7 +26,7 @@ class MainContainer extends Component {
 
           <div className="row">
             <div className="col-8">
-
+hi
               <StockContainer/>
 
             </div>
